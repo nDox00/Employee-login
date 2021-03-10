@@ -18,5 +18,5 @@ for requested_name in requested_name:
         else:
             print('Access Denied')
        
-## I need to research on how to use tuples..
+## I need to research on how to use tuples.. or dictionary prolly?
 
