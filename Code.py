@@ -1,6 +1,8 @@
 requested_name = [input('Name : ').title()]
+req_password = input('Password: ')
+
 usernames = ['John','Mike', 'Will', 'Jack']
-auth = ['Admin']
+password = ['123', '1243']
 
 for requested_name in requested_name:
     if requested_name in usernames:
@@ -8,6 +10,13 @@ for requested_name in requested_name:
     elif requested_name in auth:
         print('Hello Admin, Take Control')
     else:
-        print(f'Wrong Username')
-        
-        ## I might not need the 'for' as normally only checking one login at a time
+        print ('Wrong Username')
+        break
+    
+        if req_password in password:
+            print('Access Granted')
+        else:
+            print('Access Denied')
+       
+## I need to research on how to use tuples..
+
