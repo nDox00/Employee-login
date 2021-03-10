@@ -1,22 +1,23 @@
 requested_name = [input('Name : ').title()]
-req_password = input('Password: ')
+req_password = [int(input('Password: '))]
 
-usernames = ['John','Mike', 'Will', 'Jack']
-password = ['123', '1243']
+dic = {'John':123,'Mike':32}
+auth = {'Admin': 142}
 
 for requested_name in requested_name:
-    if requested_name in usernames:
+    if requested_name in dic.keys():
         print (f'Hello {requested_name}')
-    elif requested_name in auth:
+    
+    elif requested_name in auth.keys():
         print('Hello Admin, Take Control')
     else:
         print ('Wrong Username')
         break
-    
-        if req_password in password:
+       
+        if req_password in dic.values():
             print('Access Granted')
         else:
             print('Access Denied')
+    
        
-## I need to research on how to use tuples.. or dictionary prolly?
-
+#Its not printing back after password
