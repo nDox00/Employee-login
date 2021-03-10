@@ -1,23 +1,23 @@
 requested_name = [input('Name : ').title()]
 req_password = [int(input('Password: '))]
 
-dic = {'John':123,'Mike':32}
+dic = {'John': 123, 'Mike': 32}
 auth = {'Admin': 142}
 
-for requested_name in requested_name:
-    if requested_name in dic.keys():
-        print (f'Hello {requested_name}')
-    
-    elif requested_name in auth.keys():
-        print('Hello Admin, Take Control')
+
+for req_name, req_pass in zip(requested_name, req_password):
+    password = None
+    if req_name in dic:
+        print(f"Hello {req_name}")
+        password = dic[req_name]
+    elif req_name in auth:
+        print("Hello Admin, Take Control")
+        password = auth[req_name]
     else:
-        print ('Wrong Username')
+        print("Wrong Username")
         break
-        
-    for req_password in req_password:
-        if req_password in dic.values():
-             print('Access Granted')
-        else:
-            print('Access Denied')
-       
-# Got an issue where any password will work because there independant :/
+
+    if req_pass == password:
+        print("Access Granted.!")
+    else:
+        print("Access Denied.!")
