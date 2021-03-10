@@ -13,11 +13,11 @@ for requested_name in requested_name:
     else:
         print ('Wrong Username')
         break
-       
+        
+    for req_password in req_password:
         if req_password in dic.values():
-            print('Access Granted')
+             print('Access Granted')
         else:
             print('Access Denied')
-    
        
-#Its not printing back after password
+# Got an issue where any password will work because there independant :/
