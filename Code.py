@@ -11,7 +11,7 @@ for req_name, req_pass in zip(requested_name, req_password):
         print(f"Hello {req_name}")
         password = dic[req_name]
     elif req_name in auth:
-        print("Hello Admin, Take Control")
+        print("Hello Admin, It's All Yours!")
         password = auth[req_name]
     else:
         print("Wrong Username")
