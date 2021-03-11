@@ -12,16 +12,17 @@ if req_name in dic.keys():
         print(f'Hello {req_name}')
         print('Access Granted')
     else:
-        print(f'Sorry {req_name}, Access Denied')
+        print(f'Sorry {req_name}, Incorrect Password')
         
 elif req_name in auth.keys():
     if req_password == auth.get(req_name):
         print(f'Hello {req_name} take control')
         print('Access Granted')
     else:
-        print(f'Sorry {req_name}, Access Denied')
+        print(f'Sorry {req_name}, Incorrect Password')
 
 else:
-    print('Wrong Username or Password') # this only works for username.. need to fix
+    print('Wrong Username')
+    
     
     
