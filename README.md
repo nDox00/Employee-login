@@ -1,2 +1,2 @@
 # Employee-Login
-Next, i will attempt to use tuple unpacking to check their usernames to a password
+Next, i will try use SQL to do this..
